@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/leaves02.ogg-a9a96565dbe36def97098e84f3ed42bb.oggstr"
+
+[deps]
+
+source_file="res://models/leaves02.ogg"
+dest_files=[ "res://.import/leaves02.ogg-a9a96565dbe36def97098e84f3ed42bb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

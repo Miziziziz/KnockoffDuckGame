@@ -19,6 +19,11 @@ config/name="Ps1DuckGame"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=640
+window/size/height=480
+
 [input]
 
 move_up={

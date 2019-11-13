@@ -12,11 +12,14 @@ enum STATE {WALKING, RESTING, LOOKING}
 var cur_state = STATE.WALKING
 var last_state = STATE.WALKING
 
-const REST_TIME = 1.0
+const REST_TIME = 2.0
 var cur_rest_time = 0.0
+
+onready var anim = $FarmerGraphics/AnimationPlayer
 
 func _ready():
 	goal_pos = pos_1
+	anim.play("walk_loop")
 
 func _physics_process(delta):
 	if cur_state == STATE.WALKING:
@@ -79,15 +82,18 @@ func set_rest_state():
 	set_last_state()
 	cur_state = STATE.RESTING
 	cur_rest_time = 0.0
+	anim.play("stand_loop")
 
 func set_walk_state():
 	set_last_state()
 	cur_state = STATE.WALKING
+	anim.play("walk_loop")
 
 func set_look_state():
 	set_last_state()
 	cur_state = STATE.LOOKING
 	cur_rest_time = 0.0
+	anim.play("stand_loop")
 
 func set_last_state():
 	if cur_state != STATE.LOOKING:
